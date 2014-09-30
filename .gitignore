@@ -1,0 +1,10 @@
+/*
+!.gitignore
+!README.md
+!**.c
+!**.cc
+!**PE*.py
+!**.java
+!**.txt
+!**PE*.pro
+!**PE*.gp

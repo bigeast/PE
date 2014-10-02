@@ -1,6 +1,7 @@
 /*
 !.gitignore
 !README.md
+!Notes.md
 !**.c
 !**.cc
 !**PE*.py

@@ -1,5 +1,5 @@
 * PE40
-> Champernowne's constant
+> **Champernowne's constant**
 
 * PE53
 > double类型的能力：计算 n choose k
@@ -16,3 +16,12 @@
 
 * PE122
 > 加法链问题，NP。求a^n的最少的乘法次数。快速幂的结果不一定最优。
+
+* PE282
+> **Ackermann Function** 求A(4,4),A(5,5),A(6,6)
+
+* PE287
+> Quadtree encoding
+
+* PE375
+> 查询区间内的最小值。线段树？

@@ -7,11 +7,12 @@ const int N=10000000;
 int next[N];
 int gen(int n)
 {
-	int sum=0;
+	int sum=0,t;
 	do
 	{
-		sum+=(n%10)*(n%10);
-		n/=10;
+		t = n%10;
+		sum += t*t;
+		n /= 10;
 	}while(n);
 	return sum;
 }

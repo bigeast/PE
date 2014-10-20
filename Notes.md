@@ -37,4 +37,4 @@
 > 置换群的分解
 
 * PE479
-> 公式推出了一半，根与系数的关系展开，最后得到![equation](http://www.HostMath.com/Show.aspx?Code=R_k%20%3D%201-k%5E2%20%5C%5C%0AS(n)%3D%5Csum_%7Bk%3D1%7D%5E%7Bn%7D%5Cfrac%7BR_k-R_k%5E%7Bn%2B1%7D%7D%7B1-R_k%7D)，然后算不动了。继续努力。
+> 公式推出了一半，根与系数的关系展开，最后得到![equation](data/PE479.png)，然后算不动了。继续努力。

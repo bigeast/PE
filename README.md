@@ -11,6 +11,11 @@ Euler](https://projecteuler.net).
 * I also use **Vim**(its visual block mode) and **bc** to find calculate very quickly.
 I picked up my progress about a months ago(2014.08), and decied to clean up my old(mess) codes.
 
+Some problems' source code is not available, I'll rewrite them some time in the future.
+
+List all problem ID:
+> ls PE*.* | sed 's/PE\([0-9]*\).*/\1/' | sort -n | uniq
+
 This is my profile:
 > ![bigeast's profile](https://projecteuler.net/profile/bigeast.png)
 

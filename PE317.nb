@@ -1,0 +1,728 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 10.1' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[     26282,        719]
+NotebookOptionsPosition[     25609,        691]
+NotebookOutlinePosition[     25954,        706]
+CellTagsIndexPosition[     25911,        703]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[{
+ RowBox[{
+  RowBox[{"h", "=", "100"}], ";", 
+  RowBox[{"g", "=", "9.81"}], ";", 
+  RowBox[{"v", "=", "20"}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"C1", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", "g"}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["v", "2"], 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "-", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["v", "2"], 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+     RowBox[{"2", "g"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"C2", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    RowBox[{
+     FractionBox[
+      RowBox[{"-", "g"}], 
+      RowBox[{"2", " ", 
+       SuperscriptBox["v", "2"], 
+       SuperscriptBox[
+        RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+     SuperscriptBox[
+      RowBox[{"(", 
+       RowBox[{"x", "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+          RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], "+", 
+    FractionBox[
+     RowBox[{
+      SuperscriptBox["v", "2"], 
+      SuperscriptBox[
+       RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+     RowBox[{"2", "g"}]]}]}], ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{
+   RowBox[{"E1", "[", "x_", "]"}], ":=", 
+   RowBox[{
+    FractionBox[
+     SuperscriptBox["v", "2"], 
+     RowBox[{"4", "g"}]], 
+    RowBox[{"(", 
+     RowBox[{"1", "+", 
+      SqrtBox[
+       RowBox[{"1", "-", 
+        SuperscriptBox[
+         RowBox[{"(", 
+          FractionBox[
+           RowBox[{"2", "gx"}], 
+           SuperscriptBox["v", "2"]], ")"}], "2"]}]]}], ")"}]}]}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{"C1", "[", "x", "]"}], ",", 
+       RowBox[{"C2", "[", "x", "]"}], ",", 
+       RowBox[{"E1", "[", "x", "]"}], ",", 
+       RowBox[{"-", "h"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "120"}], ",", "30"}], "}"}]}], ",", 
+     RowBox[{"Filling", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"2", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"3", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]}], "Input",
+ CellChangeTimes->{{3.683699929945022*^9, 3.6837004483783092`*^9}, 
+   3.6837005134857025`*^9}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 0.5293827620117875, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, Rational[1, 2] Pi}}, 
+    Typeset`size$$ = {812.5, {24., 12.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$1971$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$1971$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         $CellContext`C1[$CellContext`x], 
+         $CellContext`C2[$CellContext`x], 
+         $CellContext`E1[$CellContext`x], -$CellContext`h}, 
+        PlotRange -> {-120, 30}, 
+        Filling -> {
+         1 -> {{4}, {White, LightGreen}}, 2 -> {{4}, {White, LightGreen}}, 
+          3 -> {{4}, {White, LightGreen}}}], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, Rational[1, 2] Pi, 
+         AnimationRunning -> False, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{864., {53., 60.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.6837003921318846`*^9, 3.6837004158380985`*^9}, 
+   3.68370045123755*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{
+        FractionBox[
+         SuperscriptBox["v", "2"], 
+         RowBox[{"4", "g"}]], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SqrtBox[
+           RowBox[{"1", "-", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{"2", "gx"}], 
+               SuperscriptBox["v", "2"]], ")"}], "2"]}]]}], ")"}]}], ",", 
+       RowBox[{"-", "h"}]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "120"}], ",", "30"}], "}"}]}], ",", 
+     RowBox[{"Filling", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"2", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"3", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6837005300254807`*^9, 3.6837005831899877`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, Rational[1, 2] Pi}}, 
+    Typeset`size$$ = {992.5, {47., 48.25}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$3027$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$3027$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{(-$CellContext`g/(2 $CellContext`v^2 
+           Cos[$CellContext`\[Theta]$$]^2)) ($CellContext`x - \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$] 
+            Cos[$CellContext`\[Theta]$$]/$CellContext`g)^2 + $CellContext`v^2 
+          Sin[$CellContext`\[Theta]$$]^2/(
+          2 $CellContext`g), (-$CellContext`g/(2 $CellContext`v^2 
+           Cos[$CellContext`\[Theta]$$]^2)) ($CellContext`x + \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$] 
+             Cos[$CellContext`\[Theta]$$]/$CellContext`g)^2 + \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$]^2/(
+          2 $CellContext`g), ($CellContext`v^2/(4 $CellContext`g)) (
+          1 + (1 - (2 $CellContext`gx/$CellContext`v^2)^2)^
+           Rational[1, 2]), -$CellContext`h}, PlotRange -> {-120, 30}, 
+        Filling -> {
+         1 -> {{4}, {White, LightGreen}}, 2 -> {{4}, {White, LightGreen}}, 
+          3 -> {{4}, {White, LightGreen}}}], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, Rational[1, 2] Pi, 
+         AnimationRunning -> False, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{1044., {83., 90.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{3.6837005565271235`*^9}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "+", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{
+        FractionBox[
+         SuperscriptBox["v", "2"], 
+         RowBox[{"4", "g"}]], 
+        RowBox[{"(", 
+         RowBox[{"1", "+", 
+          SqrtBox[
+           RowBox[{"1", "-", 
+            SuperscriptBox[
+             RowBox[{"(", 
+              FractionBox[
+               RowBox[{"2", "g", " ", "x"}], 
+               SuperscriptBox["v", "2"]], ")"}], "2"]}]]}], ")"}]}], ",", 
+       RowBox[{"-", "h"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", "120"}], ",", "120"}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "120"}], ",", "30"}], "}"}]}], ",", 
+     RowBox[{"Filling", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"1", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"2", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"3", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", "4", "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}]}], 
+       "}"}]}]}], "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6837005952407866`*^9, 3.6837006287463083`*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 0.8208364152594555, 
+    Typeset`show$$ = True, Typeset`bookmarkList$$ = {}, 
+    Typeset`bookmarkMode$$ = "Menu", Typeset`animator$$, Typeset`animvar$$ = 
+    1, Typeset`name$$ = "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, Rational[1, 2] Pi}}, 
+    Typeset`size$$ = {360., {113., 116.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$9334$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$9334$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> 
+      Plot[{(-$CellContext`g/(2 $CellContext`v^2 
+           Cos[$CellContext`\[Theta]$$]^2)) ($CellContext`x - \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$] 
+            Cos[$CellContext`\[Theta]$$]/$CellContext`g)^2 + $CellContext`v^2 
+          Sin[$CellContext`\[Theta]$$]^2/(
+          2 $CellContext`g), (-$CellContext`g/(2 $CellContext`v^2 
+           Cos[$CellContext`\[Theta]$$]^2)) ($CellContext`x + \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$] 
+             Cos[$CellContext`\[Theta]$$]/$CellContext`g)^2 + \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$]^2/(
+          2 $CellContext`g), ($CellContext`v^2/(4 $CellContext`g)) (
+          1 + (1 - (2 $CellContext`g $CellContext`x/$CellContext`v^2)^2)^
+           Rational[1, 2]), -$CellContext`h}, {$CellContext`x, -120, 120}, 
+        PlotRange -> {-120, 30}, 
+        Filling -> {
+         1 -> {{4}, {White, LightGreen}}, 2 -> {{4}, {White, LightGreen}}, 
+          3 -> {{4}, {White, LightGreen}}}], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, Rational[1, 2] Pi, 
+         AnimationRunning -> False, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{411., {150., 157.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{{3.683700608999149*^9, 3.683700632090214*^9}}]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"Animate", "[", 
+  RowBox[{
+   RowBox[{"Plot", "[", 
+    RowBox[{
+     RowBox[{"{", 
+      RowBox[{
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{
+        RowBox[{
+         FractionBox[
+          RowBox[{"-", "g"}], 
+          RowBox[{"2", " ", 
+           SuperscriptBox["v", "2"], 
+           SuperscriptBox[
+            RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+         SuperscriptBox[
+          RowBox[{"(", 
+           RowBox[{"x", "-", 
+            FractionBox[
+             RowBox[{
+              SuperscriptBox["v", "2"], 
+              RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+              RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], "2"]}], 
+        "+", 
+        FractionBox[
+         RowBox[{
+          SuperscriptBox["v", "2"], 
+          SuperscriptBox[
+           RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+         RowBox[{"2", "g"}]]}], ",", 
+       RowBox[{"Max", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{
+           FractionBox[
+            RowBox[{"-", "g"}], 
+            RowBox[{"2", " ", 
+             SuperscriptBox["v", "2"], 
+             SuperscriptBox[
+              RowBox[{"Cos", "[", "\[Theta]", "]"}], "2"]}]], 
+           SuperscriptBox[
+            RowBox[{"(", 
+             RowBox[{"x", "+", 
+              FractionBox[
+               RowBox[{
+                SuperscriptBox["v", "2"], 
+                RowBox[{"Sin", "[", "\[Theta]", "]"}], 
+                RowBox[{"Cos", "[", "\[Theta]", "]"}]}], "g"]}], ")"}], 
+            "2"]}], "+", 
+          FractionBox[
+           RowBox[{
+            SuperscriptBox["v", "2"], 
+            SuperscriptBox[
+             RowBox[{"Sin", "[", "\[Theta]", "]"}], "2"]}], 
+           RowBox[{"2", "g"}]]}], ",", 
+         RowBox[{
+          FractionBox[
+           SuperscriptBox["v", "2"], 
+           RowBox[{"4", "g"}]], 
+          RowBox[{"(", 
+           RowBox[{"1", "+", 
+            SqrtBox[
+             RowBox[{"1", "-", 
+              SuperscriptBox[
+               RowBox[{"(", 
+                FractionBox[
+                 RowBox[{"2", "g", " ", "x"}], 
+                 SuperscriptBox["v", "2"]], ")"}], "2"]}]]}], ")"}]}]}], 
+        "]"}], ",", 
+       RowBox[{"-", "h"}]}], "}"}], ",", 
+     RowBox[{"{", 
+      RowBox[{"x", ",", 
+       RowBox[{"-", 
+        FractionBox[
+         SuperscriptBox["v", "2"], 
+         RowBox[{"2", "g"}]]}], ",", 
+       FractionBox[
+        SuperscriptBox["v", "2"], 
+        RowBox[{"2", "g"}]]}], "}"}], ",", 
+     RowBox[{"PlotRange", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"-", "120"}], ",", "30"}], "}"}]}], ",", 
+     RowBox[{"Filling", "\[Rule]", 
+      RowBox[{"{", 
+       RowBox[{"1", "\[Rule]", 
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"{", "2", "}"}], ",", 
+          RowBox[{"{", 
+           RowBox[{"White", ",", "LightGreen"}], "}"}]}], "}"}]}], "}"}]}]}], 
+    "]"}], ",", 
+   RowBox[{"{", 
+    RowBox[{"\[Theta]", ",", "0", ",", 
+     FractionBox["\[Pi]", "2"]}], "}"}], ",", 
+   RowBox[{"AnimationRunning", "\[Rule]", "False"}]}], "]"}]], "Input",
+ CellChangeTimes->{{3.6837006779864035`*^9, 3.683700834478819*^9}}],
+
+Cell[BoxData[
+ TagBox[
+  StyleBox[
+   DynamicModuleBox[{$CellContext`\[Theta]$$ = 0., Typeset`show$$ = True, 
+    Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
+    Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
+    "\"untitled\"", Typeset`specs$$ = {{
+      Hold[$CellContext`\[Theta]$$], 0, Rational[1, 2] Pi}}, 
+    Typeset`size$$ = {757., {235., 240.}}, Typeset`update$$ = 0, 
+    Typeset`initDone$$, Typeset`skipInitDone$$ = 
+    True, $CellContext`\[Theta]$53363$$ = 0}, 
+    DynamicBox[Manipulate`ManipulateBoxes[
+     1, StandardForm, "Variables" :> {$CellContext`\[Theta]$$ = 0}, 
+      "ControllerVariables" :> {
+        Hold[$CellContext`\[Theta]$$, $CellContext`\[Theta]$53363$$, 0]}, 
+      "OtherVariables" :> {
+       Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
+        Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
+        Typeset`specs$$, Typeset`size$$, Typeset`update$$, Typeset`initDone$$,
+         Typeset`skipInitDone$$}, "Body" :> Plot[{
+         Max[(-$CellContext`g/(2 $CellContext`v^2 
+            Cos[$CellContext`\[Theta]$$]^2)) ($CellContext`x - \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$] 
+             Cos[$CellContext`\[Theta]$$]/$CellContext`g)^2 + \
+$CellContext`v^2 Sin[$CellContext`\[Theta]$$]^2/(
+           2 $CellContext`g), ($CellContext`v^2/(4 $CellContext`g)) (
+           1 + (1 - (2 $CellContext`g $CellContext`x/$CellContext`v^2)^2)^
+            Rational[
+             1, 2])], -$CellContext`h}, {$CellContext`x, -($CellContext`v^2/(
+          2 $CellContext`g)), $CellContext`v^2/(2 $CellContext`g)}, 
+        PlotRange -> {-120, 30}, 
+        Filling -> {1 -> {{2}, {White, LightGreen}}}], 
+      "Specifications" :> {{$CellContext`\[Theta]$$, 0, Rational[1, 2] Pi, 
+         AnimationRunning -> False, 
+         AppearanceElements -> {
+          "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
+           "DirectionButton"}}}, 
+      "Options" :> {
+       ControlType -> Animator, AppearanceElements -> None, DefaultBaseStyle -> 
+        "Animate", DefaultLabelStyle -> "AnimateLabel", SynchronousUpdating -> 
+        True, ShrinkingDelay -> 10.}, "DefaultOptions" :> {}],
+     ImageSizeCache->{808., {273., 280.}},
+     SingleEvaluation->True],
+    Deinitialization:>None,
+    DynamicModuleValues:>{},
+    SynchronousInitialization->True,
+    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
+    UnsavedVariables:>{Typeset`initDone$$},
+    UntrackedVariables:>{Typeset`size$$}], "Animate",
+   Deployed->True,
+   StripOnInput->False],
+  Manipulate`InterpretManipulate[1]]], "Output",
+ CellChangeTimes->{
+  3.683700708862146*^9, {3.6837007678354187`*^9, 3.683700790925397*^9}}]
+}, Open  ]]
+},
+WindowSize->{1166, 690},
+WindowMargins->{{Automatic, 223}, {Automatic, 50}},
+FrontEndVersion->"10.1 for Microsoft Windows (64-bit) (March 23, 2015)",
+StyleDefinitions->"Default.nb"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 3522, 113, 263, "Input"],
+Cell[4105, 137, 2373, 48, 130, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6515, 190, 3195, 97, 169, "Input"],
+Cell[9713, 289, 2898, 56, 190, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[12648, 350, 3304, 100, 169, "Input"],
+Cell[15955, 452, 2988, 57, 324, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[18980, 514, 3893, 119, 141, "Input"],
+Cell[22876, 635, 2717, 53, 570, "Output"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)

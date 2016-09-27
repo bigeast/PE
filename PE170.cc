@@ -103,6 +103,7 @@ int check(char *digits)
 		printf("t %d\n",t);
 		puts("Impossible!");
 	}
+    return 0;
 }
 
 int main(int argc, const char *argv[])

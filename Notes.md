@@ -3,6 +3,10 @@
 > **Champernowne's constant**
 > 将连续的自然数写到字符串中，求任意位置的字符。《编程之美》上好像也有。
 
+* [ ] PE156
+
+> 同样是 **Champernowne's constant** 相关的问题。用f(n,d)表示前n个数字中d出现的次数，求f(n,d) = n的所有解。
+
 * PE53
 
 > double类型的能力：计算 n choose k

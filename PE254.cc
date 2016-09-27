@@ -135,7 +135,7 @@ int main() {
 	for (expn = 17; expn > 1; --expn) {
 		len = pow(10, expn) / factorial[9]; // n的长度，随着9的个数的减少而不断增长，因此能够保证 i 在 (9 * (expn - 1), 9 * expn] 中时，遇到的第一个g[i]就是最后的g[i]
 		bool done = false;
-		for (L = 1; !done; ++L) { // expn - L 个 9，与前面L个非9数字。
+		for (L = 1; !done; ++L) { // expn - L 个 9，与前面 ~~L个~~ 非9数字。
 			cout << "L: " << L << endl;
 			dfs(0, (len - L) * 27); // level, fn, 可能还需要len*27
 			done = true;

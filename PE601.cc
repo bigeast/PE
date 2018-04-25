@@ -9,25 +9,29 @@
 #include <stdio.h>
 typedef unsigned long long ULL;
 
-ULL streak(ULL n)
-{
-    ULL res = 1;
-    while((n + res) % (res + 1) == 0)
-    {
-        ++res;
-    }
-    return res;
-}
+#define streak(n, k) do {\
+    k = 1;\
+    while((n + k) % (k + 1) == 0)\
+    {\
+        ++k;\
+    }\
+} while(0)\
+
 int main(int argc, const char *argv[])
 {
-    int cnt = 0;
-    for (int i = 2; i < 1e6; i++) {
-        if(streak(i) == 6)
-        {
-            cnt++;
-            printf("%d %llu\n", i, streak(i));
+    ULL res = 0;
+    ULL k = 0;
+    for (int idx = 1; idx <= 15; idx++) {
+        ULL cnt = 0;
+        for (ULL n = 2; n < (1<<(2 * idx)); n++) {
+            if((n + idx) % (idx + 1) == 0) continue;
+            streak(n, k);
+            if(k == idx) ++cnt;
         }
+        printf("%d %llu\n", idx, cnt);
+        fflush(stdout);
+        res += cnt;
     }
-    printf("Answer is %d\n", cnt);
+    printf("Answer is %llu\n", res);
     return 0;
 }

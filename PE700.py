@@ -1,3 +1,8 @@
+# 2020.07.28
+# Answer of PE700 is:  1517926517777556
+# CPU times: user 1min 12s, sys: 1.9 s, total: 1min 14s
+# Wall time: 1min 21s
+
 import tqdm
 
 a = 1504170715041707
